@@ -18,19 +18,18 @@ public class GameTest {
     }
 
     @Test
-    public void canSetUp(){
-        game.SetUpResults();
+    public void hasArrayCount(){
         assertEquals(3, game.getResults().size());
     }
 
-//    @Test
-//    public void canRandom(){
-//        assertEquals("rock", game.randomResult());
-//    }
+    @Test
+    public void canRandom(){
+        assertEquals("rock", game.randomResult());
+    }
 
-//    @Test
-//    public void canGameResult(){
-//        assertEquals("You have won", game.gameResult("rock"));
-//    }
+    @Test
+    public void canGameResult(){
+        assertEquals("You have won", game.oldGameResult("rock"));
+    }
 
 }

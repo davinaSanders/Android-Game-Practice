@@ -11,6 +11,7 @@ public class GameActivity extends AppCompatActivity {
     Button scissorsButton;
     Button paperButton;
     TextView gameResultText;
+//    TextView androidChoice;
 
 
     @Override
@@ -22,13 +23,16 @@ public class GameActivity extends AppCompatActivity {
         scissorsButton = findViewById(R.id.scissors_button);
         paperButton = findViewById(R.id.paper_button);
         gameResultText = findViewById(R.id.game_result);
+//        androidChoice = findViewById(R.id.android_choice);
 
     }
 
     public void onButtonRockClick(View view){
-        String rock = "rock";
         Game game = new Game();
-        gameResultText.setText(game.gameResult(rock));
+        String rock = "rock";
+        String answer = game.gameResult(rock);
+
+        gameResultText.setText(answer);
     }
 
     public void onButtonScissorsClick(View view){
@@ -42,6 +46,20 @@ public class GameActivity extends AppCompatActivity {
         String paper = "paper";
         Game game = new Game();
         gameResultText.setText(game.gameResult(paper));
+
+    }
+
+    public void onButtonSpockClick(View view){
+        String spock = "spock";
+        Game game = new Game();
+        gameResultText.setText(game.gameResult(spock));
+
+    }
+
+    public void onButtonLizardClick(View view){
+        String lizard = "lizard";
+        Game game = new Game();
+        gameResultText.setText(game.gameResult(lizard));
 
     }
 
